@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediksi Kesehatan</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Prediksi Kesehatan Dengan Algoritma KNN</h1>
+    <form method="POST" action="/predict">
+        <label for="gula_darah">Gula Darah:</label>
+        <input type="number" name="gula_darah" required><br>
+
+        <label for="kolesterol">Kolesterol:</label>
+        <input type="number" name="kolesterol" required><br>
+
+        <label for="asam_urat">Asam Urat:</label>
+        <input type="number" name="asam_urat" required><br>
+
+        <input type="submit" value="Prediksi">
+    </form>
+    
+    <!-- Tambahkan elemen untuk menampilkan hasil prediksi -->
+    {% if hasil_prediksi %}
+        <p class="result">Hasil Prediksi: {{ hasil_prediksi }}</p>
+    {% endif %}
+
+    <br>
+    <p>
+        1. Iqbal sain (2003015109)<br>
+        2. Putra Rafli Wiro Negoro (2003015099)<br>
+        3. Muhammad Irvan Fadillah (2003015095)<br>
+        4. Muhamad Firman Mawahda (1803015154)<br>
+        <br>KELOMPOK TERKECE DAN TERKEREN
+    </p>
+</body>
+</html>
